@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Color" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-Cz-goz">
+                                <rect key="frame" x="46.5" y="48.5" width="227" height="383"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6zf-Ey-vP1">
+                                        <rect key="frame" x="19" y="0.0" width="189" height="32"/>
+                                        <segments>
+                                            <segment title="🐱"/>
+                                            <segment title="👑"/>
+                                            <segment title="😿"/>
+                                            <segment title="🎼"/>
+                                            <segment title="🎅🏻"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="SegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bho-ao-tQW"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm just a cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quw-Tn-9W6">
+                                        <rect key="frame" x="65.5" y="51" width="96.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SU0-RH-lbF">
+                                        <rect key="frame" x="13.5" y="91.5" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Acu-6e-4vv"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="c2w-26-YYr"/>
+                                            <constraint firstAttribute="width" constant="200" id="hJj-rp-bSn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="kdw-tM-dKI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your color?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMj-uU-UaG">
+                                        <rect key="frame" x="42" y="311.5" width="143" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mt1-Mo-w2O">
+                                        <rect key="frame" x="0.0" y="352" width="227" height="32"/>
+                                        <segments>
+                                            <segment title="🤍"/>
+                                            <segment title="💚"/>
+                                            <segment title="💛"/>
+                                            <segment title="💙"/>
+                                            <segment title="💜"/>
+                                            <segment title="❤️"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="colorSegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="a64-4I-4IM"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MGk-Cz-goz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Epg-3g-giL"/>
+                            <constraint firstItem="MGk-Cz-goz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgZ-YJ-h3n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCaptionLabel" destination="MMj-uU-UaG" id="5Tc-Be-uii"/>
+                        <outlet property="bottomCaptionSegmentedControl" destination="mt1-Mo-w2O" id="bjc-38-MHe"/>
+                        <outlet property="mainImage" destination="SU0-RH-lbF" id="REH-ig-5TK"/>
+                        <outlet property="topCaptionLabel" destination="Quw-Tn-9W6" id="1cU-HQ-9ng"/>
+                        <outlet property="topCaptionSegmentedControl" destination="6zf-Ey-vP1" id="HQz-2q-f2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.125" y="68.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
